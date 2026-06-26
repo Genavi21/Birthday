@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Shineeeee!!!</title>
+
+  <!-- This script pulls in Tailwind CSS for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- These are for the animations and photo gallery -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css" />
+
+  <!-- Google Fonts for the Anime look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Link to your new external CSS file -->
+  <link rel="stylesheet" href="style.css">
+  <!-- IMPORTANT: Replace with a real image link after you upload it -->
+  <meta property="og:image" content="https://placehold.co/1200x630/87CEEB/FFFFFF?text=A+Surprise+For+[Name]">
+</head>
+<body>
+<!-- Canvas for the falling cherry blossoms -->
+<canvas id="sakura-canvas"></canvas>
+
+<!-- Section 1: Hero Welcome -->
+<header class="h-screen relative flex items-center justify-center text-white overflow-hidden">
+  <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
+    <source src="img/sa.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+  <div class="text-center z-10 p-4" data-aos="fade-in" data-aos-duration="1500">
+    <h1 class="text-5xl md:text-7xl font-anime drop-shadow-lg">Happy Birthday, Shineeeeee!!!</h1>
+    <p class="mt-4 text-xl font-semibold">Because you deserve something more than just a birthday text 🎂</p>
+    <div id="countdown" class="mt-6 text-2xl font-semibold tracking-widest leading-relaxed"></div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="container mx-auto p-6 md:p-12">
+
+  <!-- Section 2: A Letter For You -->
+  <section class="my-16 md:my-24 max-w-3xl mx-auto text-center" data-aos="fade-up">
+    <h2 class="text-4xl md:text-5xl font-anime text-sakura mb-8 drop-shadow-sm">A Special Message For You</h2>
+    <div class="text-left text-lg leading-relaxed space-y-4 bg-white p-8 rounded-lg shadow-lg">
+      <!-- TODO: Write your personal letter here -->
+      <p>Hey Bestieee,</p>
+      <p>Wishing you the happiest birthday! 🎂❤️. I don't know if I've told you this before, but I'm very, very grateful to have a best friend like you 🫶. Honestly, it's something worth saying over and over again. You've always stood by me through both the good times and the bad 💕. You're a friend who truly understands me in a way that very few people do, sometimes even more than my own family 🥹, and that's something I'll always be grateful for.</p>
+      <p>You remember the smallest things about me, from listening to all my endless sob stories 😭, to sending me bandages when I tripped and hurt myself 🩹, or ordering food for me just because I decided not to eat all day after an argument at home ❤️. You have always been my partner in crime, and whenever I had problems,whether at home, with friends, in college, or even with boys 🤦‍♀️,you were always there with advice and solutions 💡 (even though I still manage to overthink everything after you've already solved the problem 😭😂).</p>
+      <p>Thank you for always covering for me 🫂, spoiling me with yummy food 🍫 and thoughtful gifts 🎁, and paying attention to even the tiniest details about the things I love. It's the little things you do that mean the most 💖.For me, you're more than just a best friend. You're my comfort , my safe place 🏡, my biggest support system 💪, and one of the people I cherish the most ❤️. I genuinely don't know what I would do without you.</p>
+      <p>I truly believe that even if the whole world ever gives up on me or turns its back on me, you never will and I promise I’ll always be there for you the same way.</p>
+      <p>Love you so much, Shineeeee ❤️🫶</p>
+      <p class="text-right mt-8">
+        Gyan💜<br>
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 3: The Timeline -->
+  <section class="my-16 md:my-24">
+    <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">Your Story Arc</h2>
+    <div class="space-y-16">
+      <!-- Timeline Item 1 -->
+      <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-right">
+        <!-- TODO: Replace with your photo -->
+        <img src="img/img40.jpeg" alt="Add photo 1" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+        <div class="text-center md:text-left">
+          <!-- TODO: Customize the date and story -->
+          <h3 class="text-2xl font-anime text-sakura">Our Best Memory Together</h3>
+          <p class="mt-2 text-lg">I think this is one of our best memories, or at least one of my favourites. Remember the kind of stunts we had to pull just to make this plan work? 😭 This was the first birthday celebration of yours that I got to be a part of, and the first time all of us came together to celebrate you.I still remember how shocked you were when you saw me there (even though you kind of had a feeling I might show up 😌). But hey, I still count that as a successful surprise. 😂What makes this memory so special to me is the look on your face when we introduced you to Maggie 🐶. The happiness, excitement, and pure joy you had in that moment made every bit of planning and every struggle worth it. From secretly coordinating everything to convincing the restaurant to let Maggie in, nothing about that day was easy, but seeing your reaction made it all worthwhile.That day reminded me how little things can mean so much, especially when they're shared with people you care about. More than anything, I just want to see you that happy every single day, because you deserve nothing less. ❤️</p>
+            <br>
+        </div>
+      </div>
+      <!-- Timeline Item 2 -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-8" data-aos="fade-left">
+        <!-- TODO: Replace with your photo -->
+        <img src="img/img41.jpeg" alt="Add photo 2" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+        <div class="text-center md:text-right">
+          <!-- TODO: Customize the date and story -->
+          <h3 class="text-2xl font-anime text-sakura">Unforgettable Moment</h3>
+          <p class="mt-2 text-lg">This has to be one of the best days of my life. ❤️ Even today, I still find myself reliving this memory and smiling. It was my 21st birthday, and despite knowing how busy both you and Jyots were, you still took the time to come all the way to my college just to surprise me 🥹. What makes it even more special is that you had to wait for my practice to get over and then patiently sit through my birthday celebration with my college friends. Looking back, I don't know how you both managed it without getting frustrated. 😭. And as if that wasn't enough, you had already decorated your house for me, packed gifts, and made sure every single thing was something I loved 🎁❤️. The fact that you both put in so much effort, despite your busy schedules, meant more to me than I can ever put into words.A special mention also goes to my 22nd birthday 🫶. In the middle of your MBA 1st sem finals and all the academic chaos, you somehow found the time to make me a handcrafted album and surprise me . Not only that, but you also made sure I got to do all the things I wanted for my birthday. The amount of thought, effort, and love you put into that day still amazes me. And that album? ❤️ It will forever be one of the most precious gifts I've ever received and something I'll cherish for the rest of my life.I also have to mention the day you came to my college during our second year just to surprise me. 😭❤️ I don't think I've ever hidden my excitement so badly because I was genuinely SO happy to see you.Thank you for always making my birthdays feel special, loved, and unforgettable. It's the effort and thought behind them that I'll always treasure the most. </p>
+         <br>
+        </div>
+      </div>
+      <!-- Timeline Item 3 (NEW) -->
+      <div class="flex flex-col md:flex-row items-center gap-8" data-aos="fade-right">
+        <img src="img/img42.jpeg" alt="Add photo 3" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+        <div class="text-center md:text-left">
+          <h3 class="text-2xl font-anime text-sakura">To My Childhood Buddy</h3>
+          <p class="mt-2 text-lg">I don’t even know where to start because there are so many memories and feelings I want to put into words. From LKG till now, you have been one of the most special people in my life. It’s amazing how a friendship that started when we were so little became such an important part of my journey. You were the person who pushed me to be brave and try things I never thought I could do. I still remember that day when you taught me how to get on the metro. It may seem like a small thing, but for me, it was a big moment. You came with me till the end of the metro station and made sure I was okay. That day showed me how much you cared and how you always stood by me. You have always supported me in the smallest but sweetest ways. Like how you used to buy me a Thumbs Up whenever I went and ordered something by myself those little moments meant so much to me. You always made me feel confident and encouraged me to do things on my own. College became such a beautiful journey because of you (and jo😜). The laughs, the memories, and all the little moments we shared are things I will always carry with me. Our Bangalore trip was one of the most memorable moments of our college life. It was our first trip together, and even though we missed jo(that idiot), I never regretted a single second of that trip. You took care of me throughout the trip, and that made me realize again how lucky I am to have you. And I can never forget how you were there for me during exams. Every time I got scared, I used to text you saying, “ I am so scared, I am so scared.” I would message you almost every day during exam time, and you always knew how to calm me down. You would just tell me, “Take it lightly,” and somehow those simple words made me feel better. You always helped me handle my stress and made things feel easier. You were not just my friend; you were my backbone. You made scary things feel easy, ordinary days feel special, and college life so much more fun. Thank you for always being there, for believing in me, and for making so many beautiful memories with me.I’m truly grateful that life gave me a friend like you. No matter how much time passes, these memories and our bond will always be special to me.With lots of love, Christ.</p>
+         <br>
+        </div>
+      </div>
+      <!-- Timeline Item 4 (NEW) -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-8" data-aos="fade-left">
+        <img src="img/img43.jpeg" alt="Add photo4" class="w-full md:w-1/2 rounded-lg shadow-xl border-4 border-white">
+        <div class="text-center md:text-right">
+          <h3 class="text-2xl font-anime text-sakura">To My Lovely Sis</h3>
+          <p class="mt-2 text-lg">To the Shine in My Life 💜,To one of my favourite companions through college and beyond, and hopefully for a lifetime. Honestly, you're just such a feel-good person to be around. I genuinely wish everyone had someone like you in their life because then they'd know what it feels like to have such a wholesome and beautiful bond.Wishing you the most magical moments, endless happiness, and all the wonderful things life has to offer, dear Shine Star 🌟. Your happiness and a beautiful life have genuinely been a part of my prayers and wishes for as long as I can remember.Love you, Sis! 💜🫶 Just stay exactly the way you are because you are truly one in a trillion. And that's not just something I'm saying for the sake of it—I genuinely got lucky to have you in my life, girl!! 🥹.With lots of love, Jyots❤️</p>
+            <br>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Your Favourite Photos of your loved Ones (NEW SECTION) -->
+  <section class="my-16 md:my-24">
+    <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">Beautiful You</h2>
+    <div class="relative">
+      <!-- Scroll Buttons -->
+      <button id="scroll-left-btn" class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-opacity opacity-0 md:opacity-100">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sakura" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+      </button>
+      <button id="scroll-right-btn" class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-opacity opacity-0 md:opacity-100">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sakura" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+      </button>
+
+      <!-- Scrollable Container -->
+      <div id="hall-of-fame-scroller" class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide p-4 -mx-4">
+        <div class="flex snap-x snap-mandatory gap-8">
+          <!--  Card 1 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="100">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/img44.jpeg" alt="Photo 1" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">Photo 1</h3>
+              <p class="mt-2">Our Veryy Own Desi Girl😚💖</p>
+            </div>
+          </div>
+          <!--  Card 2 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="200">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/img45.jpeg" alt="Photo 2" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">Photo 2</h3>
+              <p class="mt-2">Hottieee🔥🔥🔥</p>
+            </div>
+          </div>
+          <!--  Card 3 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="300">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/img46.jpeg" alt="Photo 3" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">Photo 3</h3>
+              <p class="mt-2">Laal Pari (or) Laal Patakha❤️‍🔥🔥</p>
+            </div>
+          </div>
+          <!--  Card 4 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="400">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/img47.jpeg" alt="Photo 4" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">Photo 4</h3>
+              <p class="mt-2">Ayee Hayee Aise Ghooro Mat Sharam Aarahi Hai🤭😘</p>
+            </div>
+          </div>
+          <!--  Card 5 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="500">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/img48.jpeg" alt="Photo 5" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">Photo 5</h3>
+              <p class="mt-2">Maggie The Mogger🥰😍</p>
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="600">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
+              <img src="img/img49.jpeg" alt="Photo 6" class="w-full h-80 object-cover rounded-md mb-4">
+              <h3 class="text-2xl font-anime text-sakura">Photo 6</h3>
+              <p class="mt-2">Body Is Tea💋</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: The Gallery -->
+  <section class="my-16 md:my-24">
+    <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">Forever Us</h2>
+    <p class="text-center text-lg -mt-8 mb-12">Happyy Daysss</p>
+    <div id="lightgallery" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <a href="img/img50.jpeg" data-aos="zoom-in" class="block w-full h-48 md:h-64">
+        <img src="img/img50.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 1">
+      </a>
+      <a href="img/img51.jpeg" data-aos="zoom-in" data-aos-delay="100" class="block w-full h-48 md:h-64">
+        <img src="img/img51.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 2">
+      </a>
+      <a href="img/img52.jpeg" data-aos="zoom-in" data-aos-delay="200" class="block w-full h-48 md:h-64">
+        <img src="img/img52.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 3">
+      </a>
+      <a href="img/img53.jpeg" data-aos="zoom-in" data-aos-delay="300" class="block w-full h-48 md:h-64">
+        <img src="img/img53.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 4">
+      </a>
+      <!-- Second Row of Photos -->
+      <a href="img/img54.jpeg" data-aos="zoom-in" data-aos-delay="400" class="block w-full h-48 md:h-64">
+        <img src="img/img54.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 5">
+      </a>
+      <a href="img/img55.jpeg" data-aos="zoom-in" data-aos-delay="500" class="block w-full h-48 md:h-64">
+        <img src="img/img55.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 6">
+      </a>
+      <a href="img/img56.jpeg" data-aos="zoom-in" data-aos-delay="600" class="block w-full h-48 md:h-64">
+        <img src="img/img56.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 7">
+      </a>
+      <a href="img/img57.jpeg" data-aos="zoom-in" data-aos-delay="700" class="block w-full h-48 md:h-64">
+        <img src="img/img57.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 8">
+      </a>
+      <!-- Third Row of Photos -->
+      <a href="img/img58.jpeg" data-aos="zoom-in" data-aos-delay="800" class="block w-full h-48 md:h-64">
+        <img src="img/img58.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 9">
+      </a>
+      <a href="img/img61.jpeg" data-aos="zoom-in" data-aos-delay="900" class="block w-full h-48 md:h-64">
+        <img src="img/img61.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 10">
+      </a>
+      <a href="img/img60.jpeg" data-aos="zoom-in" data-aos-delay="1000" class="block w-full h-48 md:h-64">
+        <img src="img/img60.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 11">
+      </a>
+      <a href="img/img59.jpeg" data-aos="zoom-in" data-aos-delay="1100" class="block w-full h-48 md:h-64">
+        <img src="img/img59.jpeg" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 12">
+      </a>
+    </div>
+  </section>
+
+    <!-- Section 6: Finale -->
+    <section class="my-16 md:my-24" data-aos="fade-up">
+        <h2 class="text-4xl md:text-5xl font-anime text-center mb-4">Saranghaeee Shineeee!!!💜💜💜</h2>
+        <div class="max-w-4xl mx-auto rounded-lg shadow-2xl overflow-hidden bg-navy">
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-navy text-white p-8 text-center">
+  <p>Enjoy your day to the fullest.</p>
+  <p class="text-sm opacity-70 mt-2">Hope you liked it...</p>
+</footer>
+
+<!-- These scripts are for the animations and photo gallery -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js"></script>
+
+<!-- Link to your new external JavaScript file -->
+<script src="script.js"></script>
+</body>
+</html>
